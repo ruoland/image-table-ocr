@@ -62,68 +62,69 @@ def extract_cell_images_from_table(image):
     largest_rect = max(bounding_rects, key=lambda r: r[2] * r[3])
     bounding_rects = [b for b in bounding_rects if b is not largest_rect]
     
+      # 세로로 병합된 셀 감지
+    def detect_vertically_merged_cells(cells):
+        merged_cells = []
+        for i, cell in enumerate(cells):
+            for j, other_cell in enumerate(cells[i+1:], start=i+1):
+                if abs(cell[0] - other_cell[0]) < 5 and abs(cell[2] - other_cell[2]) < 5:
+                    if cell[1] < other_cell[1] and cell[1] + cell[3] > other_cell[1]:
+                        merged_cells.append((i, j))
+        return merged_cells
+
+    # 셀들을 행과 열로 그룹화
+    def group_cells_into_rows_and_columns(cells):
+        sorted_cells = sorted(cells, key=lambda c: (c[1], c[0]))  # y좌표로 정렬 후 x좌표로 정렬
+        rows = []
+        current_row = []
+        last_y = -1
+        for cell in sorted_cells:
+            if abs(cell[1] - last_y) > 10:  # 새로운 행 시작
+                if current_row:
+                    rows.append(sorted(current_row, key=lambda c: c[0]))
+                current_row = [cell]
+                last_y = cell[1]
+            else:
+                current_row.append(cell)
+        if current_row:
+            rows.append(sorted(current_row, key=lambda c: c[0]))
+        return rows
+
     cells = [c for c in bounding_rects]
-    
-    # 같은 행에 있는 셀 판단 함수
-    def cell_in_same_row(c1, c2):
-        c1_center = c1[1] + c1[3] - c1[3] / 2
-        c2_bottom = c2[1] + c2[3]
-        c2_top = c2[1]
-        return c2_top < c1_center < c2_bottom
-    
-    # 셀들을 행별로 그룹화
-    orig_cells = [c for c in cells]
-    rows = []
-    while cells:
-        first = cells[0]
-        rest = cells[1:]
-        cells_in_same_row = sorted(
-            [
-                c for c in rest
-                if cell_in_same_row(c, first)
-            ],
-            key=lambda c: c[0]
-        )
-        row_cells = sorted([first] + cells_in_same_row, key=lambda c: c[0])
-        rows.append(row_cells)
-        cells = [
-            c for c in rest
-            if not cell_in_same_row(c, first)
-        ]
-    
-    # 행의 평균 높이 계산 함수
-    def avg_height_of_center(row):
-        centers = [y + h - h / 2 for x, y, w, h in row]
-        return sum(centers) / len(centers)
-    
-    # 행을 높이 순으로 정렬
-    rows.sort(key=avg_height_of_center)
-    
-    # 각 셀의 이미지 추출
+    merged_cells = detect_vertically_merged_cells(cells)
+    rows = group_cells_into_rows_and_columns(cells)
+
+    # 병합된 셀 처리 및 이미지 추출
     cell_images_rows = []
-    for row in rows:
+    for i, row in enumerate(rows):
         cell_images_row = []
-        for x, y, w, h in row:
-            cell_images_row.append(image[y:y+h, x:x+w])
+        for j, (x, y, w, h) in enumerate(row):
+            cell_image = image[y:y+h, x:x+w]
+            is_merged = any((i, k) in merged_cells for k in range(i+1, len(rows)))
+            if is_merged:
+                # 병합된 셀의 경우 다음 행의 셀과 병합
+                next_cell = next((cell for cell in rows[i+1] if abs(cell[0] - x) < 5), None)
+                if next_cell:
+                    _, ny, _, nh = next_cell
+                    cell_image = image[y:ny+nh, x:x+w]
+            cell_images_row.append({"image": cell_image, "merged": is_merged})
         cell_images_rows.append(cell_images_row)
+
     return cell_images_rows
 
 def main(f):
-    results = []
     directory, filename = os.path.split(f)
     table = cv2.imread(f, cv2.IMREAD_GRAYSCALE)
     rows = extract_cell_images_from_table(table)
     cell_img_dir = os.path.join(directory, "cells")
     os.makedirs(cell_img_dir, exist_ok=True)
     paths = []
-    
-    # 추출된 셀 이미지 저장
-    
+
     for i, row in enumerate(rows):
         for j, cell in enumerate(row):
-            cell_filename = "{:03d}-{:03d}.png".format(i, j)
-            
+            cell_filename = "{:03d}-{:03d}{}.png".format(i, j, "_merged" if cell["merged"] else "")
             path = os.path.join(cell_img_dir, cell_filename)
-            cv2.imwrite(path, cell)
-            paths.append(path)
+            cv2.imwrite(path, cell["image"])
+            paths.append({"path": path, "merged": cell["merged"]})
+
     return paths

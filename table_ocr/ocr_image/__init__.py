@@ -18,6 +18,7 @@ def main(image_file, tess_args):
     Returns the name of the text file that contains the text.
     """
     #폴더 경로와 파일 이름
+    print(image_file)
     directory, filename = os.path.split(image_file)
     
     print(directory, filename)

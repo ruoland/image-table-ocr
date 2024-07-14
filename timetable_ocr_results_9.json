@@ -1,0 +1,409 @@
+{
+  "0": {
+    "0": {
+      "text": "일 일",
+      "colspan": 3,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "월요일 -",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "화요일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "3": {
+      "text": "수요일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "4": {
+      "text": "목요일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "5": {
+      "text": "금요일 -",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "6": {
+      "text": "토요일 일",
+      "colspan": 1,
+      "rowspan": 1
+    }
+  },
+  "1": {
+    "0": {
+      "text": "1교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "9 : 00 - 10 :0 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "지하부환경과 이해와적용 ( ᄐ 강의동호 207호 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "4": {
+      "text": "전공영업 김현정 강의동 204호 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "6": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "7": {
+      "text": "생리장해관ᄅ 이소라 강의동 206호 일",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "2": {
+    "0": {
+      "text": "2교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "10 : 00 - 11 : 00 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "3": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "4": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "5": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "6": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "7": {
+      "text": "생리장해관ᄅ 이소라 강의동 206호 일",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "3": {
+    "0": {
+      "text": "3교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "11 : 00 - 12 : 00 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "3": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "4": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    }
+  },
+  "4": {
+    "0": {
+      "text": "4교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "12 : 00 - 13 : 00 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "3": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "4": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "5": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "6": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "7": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    }
+  },
+  "5": {
+    "0": {
+      "text": "5교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "13 : 00 - 14 : 00 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "생리장해관ᄅ 장미하 강의실 301호 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "스마트팜 프로젝트실스 맹원영 강의동 302호 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "4": {
+      "text": "스마담시스림 이인규 강의동 301호 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "6": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "7": {
+      "text": "지하부환경과 이해와적용 ( ᄐ 강의동효인20 일",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "6": {
+    "0": {
+      "text": "6교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "14 : 00 - 15 : 00 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "3": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "4": {
+      "text": "스마담시스림 이인규 강의동 301호 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "6": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "7": {
+      "text": "지하부환경과 이해와적용 ( ᄐ 강의동효인20 일",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "7": {
+    "0": {
+      "text": "7교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "15 : 00 - 16 : 00 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "3": {
+      "text": "전공영업 박혜랑 [ 비대면 ] * 주말반강의 일",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "8": {
+    "0": {
+      "text": "8교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "16 : 00 - 17 : 00 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "3": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "4": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "5": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "6": {
+      "text": "스마등시스림 김재우 강의동 206호 일",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "9": {
+    "0": {
+      "text": "9교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "17 : 00 - 18 : 00 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "3": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "4": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "5": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "6": {
+      "text": "스마등시스림 김재우 강의동 206호 일",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "10": {
+    "0": {
+      "text": "10교시 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "18 : 00 - 19 : 00 과",
+      "colspan": 2,
+      "rowspan": 1
+    },
+    "2": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "3": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "4": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "5": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "6": {
+      "text": "일 일",
+      "colspan": 1,
+      "rowspan": 1
+    }
+  }
+}

@@ -402,3 +402,8 @@ typings/transformers/utils/dummy_torchvision_objects.pyi
 typings/transformers/utils/dummy_vision_objects.pyi
 typings/transformers/utils/logging.pyi
 typings/transformers/utils/quantization_config.pyi
+_9_result.json
+_9_visualized.png
+debug_original_image.png
+debug_detected_tables.png
+detected_objects.png

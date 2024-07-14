@@ -1,0 +1,292 @@
+{
+  "0": {
+    "0": {
+      "text": "-",
+      "colspan": 1,
+      "rowspan": 1
+    },
+    "1": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 1
+    }
+  },
+  "1": {
+    "0": {
+      "text": "불",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "1": {
+      "text": "월 ",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "2": {
+      "text": "화 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "수",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "4": {
+      "text": "모 \"",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "금",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "2": {
+    "0": {
+      "text": "보식시",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "1": {
+      "text": "국어 ",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "2": {
+      "text": "체육 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "영어 ",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "4": {
+      "text": "사회 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "수학",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "3": {
+    "0": {
+      "text": "",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "1": {
+      "text": "수학 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "2": {
+      "text": "영어 ",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "체육 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "4": {
+      "text": "국어 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "과학",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "4": {
+    "0": {
+      "text": "",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "1": {
+      "text": "으아 명",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "2": {
+      "text": "국어 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "국어 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "4": {
+      "text": "수학 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "도덕",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "5": {
+    "0": {
+      "text": "",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "1": {
+      "text": "으아 명",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "2": {
+      "text": "과학 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "으아 명",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "4": {
+      "text": "체육 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "미술",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "6": {
+    "0": {
+      "text": "년교시화 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "1": {
+      "text": "사회 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "2": {
+      "text": "사회 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "창체 ",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "4": {
+      "text": "체육 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "미술",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "7": {
+    "0": {
+      "text": "6교시정 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "1": {
+      "text": "과학 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "2": {
+      "text": "한문 -",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "창체 ",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "4": {
+      "text": "과학 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "국어",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "8": {
+    "0": {
+      "text": "경고시설 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "1": {
+      "text": "일어 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "2": {
+      "text": "한문 -",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "도덕 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "4": {
+      "text": "사회 일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "5": {
+      "text": "일어",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  },
+  "9": {
+    "0": {
+      "text": "8고시",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "1": {
+      "text": "일어",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "2": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 3
+    },
+    "3": {
+      "text": "일",
+      "colspan": 1,
+      "rowspan": 3
+    }
+  }
+}
