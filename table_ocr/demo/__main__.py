@@ -18,8 +18,10 @@ def download_image_to_tempdir(url, filename=None):
             f.write(chunk)
     return filepath
 
-def main(url):
-    image_filepath = download_image_to_tempdir(url)
+def main(url:str):
+    image_filepath = url
+    if url.startswith('http'):
+        image_filepath = download_image_to_tempdir(url)
     image_tables = table_ocr.extract_tables.main([image_filepath])
     print("Running `{}`".format(f"extract_tables.main([{image_filepath}])."))
     print("Extracted the following tables from the image:")
@@ -36,7 +38,7 @@ def main(url):
             print("Extracted {} cells from {}".format(len(ocr), table))
             print("Cells:")
             for c, o in zip(cells[:3], ocr[:3]):
-                with open(o) as ocr_file:
+                with open(o, encoding='UTF-8') as ocr_file:
                     # Tesseract puts line feeds at end of text.
                     # Stript it out.
                     text = ocr_file.read().strip()

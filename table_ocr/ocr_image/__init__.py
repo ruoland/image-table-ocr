@@ -5,7 +5,9 @@ import sys
 import cv2
 import numpy as np
 import pytesseract
-
+import easyocr
+from table_ocr.ocr_image.ocr_korean_ddobokki import ocr_korean_multi_line
+import chardet
 def main(image_file, tess_args):
     """
     OCR the image and output the text to a file with an extension that is ready
@@ -15,22 +17,42 @@ def main(image_file, tess_args):
 
     Returns the name of the text file that contains the text.
     """
+    #폴더 경로와 파일 이름
     directory, filename = os.path.split(image_file)
+    
+    print(directory, filename)
     filename_sans_ext, ext = os.path.splitext(filename)
+    #이미지 불러오기
     image = cv2.imread(image_file, cv2.IMREAD_GRAYSCALE)
-    cropped = crop_to_text(image)
+    
+    #이미지 자르고
+    cropped = crop_to_text(image=image)
+    
+    #자른 이미지 저장하기
     ocr_data_dir = os.path.join(directory, "ocr_data")
     os.makedirs(ocr_data_dir, exist_ok=True)
     out_imagepath = os.path.join(ocr_data_dir, filename)
     out_txtpath = os.path.join(ocr_data_dir, "{}.gt.txt".format(filename_sans_ext))
     cv2.imwrite(out_imagepath, cropped)
+    
+    #자른 이미지에서 텍스트 찾기
     if not tess_args:
         d = os.path.dirname(sys.modules["table_ocr"].__file__)
         tessdata_dir = os.path.join(d, "tessdata")
-        tess_args = ["--psm", "7", "-l", "table-ocr", "--tessdata-dir", tessdata_dir]
-    txt = ocr_image(cropped, " ".join(tess_args))
-    with open(out_txtpath, "w") as txt_file:
-        txt_file.write(txt)
+        tess_args = ["--psm", "7", "-l", "kor+eng", "--tessdata-dir", '\'C:\\Program Files\\Tesseract-OCR\\tessdata\'']
+    
+    txt:str = ocr_image(cropped, " ".join(tess_args))
+    kor_txt = ocr_korean_multi_line(image_file, 'c:\\ai\\test')
+    
+    print('자름',kor_txt)
+    if len(kor_txt) == 0 :
+        kor_txt.append('비어있음')
+    with open(out_txtpath, "w", encoding='utf-8') as txt_file:
+        if len((kor_txt)) > 1:
+            for kor in kor_txt:
+                txt_file.write(kor)
+        else:
+            txt_file.write(kor_txt[0])
     return out_txtpath
 
 def crop_to_text(image):
@@ -79,6 +101,11 @@ def crop_to_text(image):
         cropped = MAX_COLOR_VAL * np.ones(shape=(20, 100), dtype=np.uint8)
     bordered = cv2.copyMakeBorder(cropped, 5, 5, 5, 5, cv2.BORDER_CONSTANT, None, 255)
     return bordered
+
+def easyocr_image(image):
+    reader = easyocr.Reader(['ko']) # this needs to run only once to load the model into memory
+    return reader.readtext(image)
+    
 def ocr_image(image, config):
     return pytesseract.image_to_string(
         image,

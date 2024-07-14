@@ -14,7 +14,9 @@ def text_files_to_csv(files):
     rows = []
     for f in files:
         directory, filename = os.path.split(f)
-        with open(f) as of:
+        print(filename)
+        
+        with open(f, encoding='UTF-8') as of:
             txt = of.read().strip()
         row, column = map(int, filename.split(".")[0].split("-"))
         if row == len(rows):
